@@ -1,0 +1,75 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+}
+
+
+
+.back {
+
+    background: url('https://img.freepik.com/vector-gratis/fondo-hexagonal-oscuro-color-degradado_79603-1409.jpg?w=740&t=st=1673536176~exp=1673536776~hmac=1887c709147e2a973c9a452bfd50aa48916b1c201e5df770fba8ec3021d0e0be') no-repeat center center;
+    background-size: 100% 100%;
+
+}
+
+.imgCreate {
+    max-width: 80px;
+    max-height: 60px;
+}
+
+.click1 {
+
+    margin: 20px;
+    padding-bottom: 20px;
+    padding: 40px;
+}
+
+.padre {
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.Search-Bar {
+
+    justify-content: center;
+
+}
+
+.imgError {
+    height: 100%;
+    width: 43%;
+
+    border-radius: 10px;
+
+
+}
+
+.refresh1 {
+    display: flex;
+
+    justify-content: space-between;
+
+
+
+}
+
+.buttonRefresh {
+    padding-bottom: 50px;
+    padding-right: 20px;
+}
+
+.textColor {
+    color: rgba(191, 123, 255, 0.781);
+    font-family: cursive;
+    font-size: 1rem;
+    padding-bottom: 30px;
+}
