@@ -1,4 +1,5 @@
 export const ASC = "ascendente"
 export const DESC = "descendente"
 export const RATING = "rating"
+export const RATINGDESC = "ratingdesc"
 export const GENERO = "genero"

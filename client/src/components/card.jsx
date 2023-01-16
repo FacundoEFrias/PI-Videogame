@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 import "./card.css"
-
+import descriptionImage from "../images/description.jpg"
 
 
 
@@ -14,7 +14,7 @@ export default function Card({ id, name, image, genre, rating }) {
 
             <div className="container">
                 <Link className="Link" to={`${id}`}>
-                    <img className="imgCard" src={image} alt="Imagen" />
+                    <img className="imgCard" src={image ? image : descriptionImage} alt="Imagen" />
                     <h2 style={{ color: "black" }}>{name}</h2>
                     <h3>{rating}</h3>
                     <h4 style={{ color: "black" }}>{genre}</h4>

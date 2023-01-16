@@ -73,7 +73,7 @@ export default function Formulario() {
         if (!input.rating) { return alert("please put the rating of the videogame") }
         dispatch(postVideogame(input))
         dispatch(getVideogame())
-        alert(`Game Created ${setInput.name}`)
+        alert(`Game Created `)
 
         setInput({
             name: "",
@@ -187,7 +187,6 @@ export default function Formulario() {
                                             type="checkbox"
                                             name="platforms"
                                             value={plat}
-                                            className
 
                                         ></input>
                                         <label name={plat} className>{plat}</label>

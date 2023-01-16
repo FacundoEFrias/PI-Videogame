@@ -1,6 +1,6 @@
 import {GENRE,GET_ALL, ID, SEARCH_ALL, SORT, ALL_GENRE, CREADOS, ALL_PlATFORMS} from "../action/actions.js"
 import { Todos } from "../constantes/FiltradoGenre.js";
-import {ASC,DESC,RATING} from "../constantes/Order.js"
+import {ASC,DESC,RATING, RATINGDESC} from "../constantes/Order.js"
 import {ALL,API} from "../constantes/Filtrado.js"
 
 
@@ -53,17 +53,27 @@ const rootReducer = (state = initialState, action) => {
                         }
                         return 0
                     })
-                } else if(action.payload === RATING){
+                } if(action.payload === RATING){
                     sortName.sort((a,b)=> {
                         if(a.rating > b.rating){
                             return -1
                         }
-                        if(b.rating> a.rating){
+                        if(b.rating > a.rating){
                             return 1
                         }
                         return 0
                     })
                 }
+                else if(action.payload === RATINGDESC){
+                    sortName.sort((a,b)=>{
+                        if(a.rating > b.rating){
+                            return 1
+                        }
+                        if(b.rating > a.rating){
+                            return -1
+                        }
+                        return 0
+                    })}
                 return {
                     ...state,
                     videogames:sortName
@@ -107,12 +117,9 @@ const rootReducer = (state = initialState, action) => {
                         ...state
                     }
                 case ALL_PlATFORMS:
-                    
-                    
                     return {
                         ...state,
                         platform: action.payload
-                        
                     }
                     
                   
