@@ -30,7 +30,7 @@ module.exports = (sequelize) => {
     image:{
       type: DataTypes.STRING
     },
-    platform:{
+    platforms:{
       type: DataTypes.STRING,
       allowNull: false
     }
