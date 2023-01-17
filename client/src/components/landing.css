@@ -58,13 +58,18 @@ button:active {
 
 .text {
     font-size: 77px;
-
+    color: rgba(255, 2, 2, 0.866);
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #fff,
+        0 0 82px #fff,
+        0 0 92px #fff,
+        0 0 102px #fff,
+        0 0 151px #fff;
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: -webkit-linear-gradient(rgba(98, 255, 0, 0.911), rgb(6, 208, 248));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: tomato;
-    text-shadow: 0.1em 0.1em 0.05em rgb(255, 0, 157)
+
 }
 
 ;

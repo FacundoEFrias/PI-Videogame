@@ -9,7 +9,7 @@ import "./filtradoGenre.css"
 
 
 
-export default function FiltradoGenre() {
+export default function FiltradoGenre({ setPagina }) {
     const dispatch = useDispatch()
     const allGenre = useSelector((state) => state.genre)
 
@@ -20,7 +20,7 @@ export default function FiltradoGenre() {
 
     function onSelectChange(e) {
         dispatch(FilterAllGenre(e.target.value))
-
+        setPagina(1)
     }
 
 

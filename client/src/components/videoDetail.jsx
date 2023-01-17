@@ -37,7 +37,7 @@ export default function VideoDetail() {
                     <img className="img" src={videoDetail.image ? videoDetail.image : descriptionImage} alt="Imagen" width="200px" height="250px" />
                     <h3 className="title">{videoDetail.description}</h3>
                     <h4 className="genres">{videoDetail.genres ? videoDetail.genres : "Genres not found"}</h4>
-                    <h5 className="platforms">{videoDetail.platforms ? videoDetail.platforms : "Platforms not found"}</h5>
+                    <h5 className="platforms">{videoDetail.platforms}</h5>
                     <h4 className="rating">{videoDetail.rating}</h4>
                     <h4 className="released">{videoDetail.released}</h4>
 
