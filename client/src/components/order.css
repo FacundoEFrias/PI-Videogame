@@ -53,3 +53,37 @@ select::-ms-expand {
 .select:hover::after {
     color: #f39c12;
 }
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --background: #8A2BE2;
+        --gray: #8A2BE2;
+        --darkgray: #8A2BE2;
+    }
+
+    .select {
+        width: 100%;
+    }
+
+    select {
+        font-size: 15px;
+    }
+
+    .select::after {
+        padding: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .select {
+        width: 20em;
+    }
+
+    select {
+        font-size: 20px;
+    }
+
+    .select::after {
+        padding: 1em;
+    }
+}

@@ -91,3 +91,69 @@
     padding: 20px;
     padding-left: 65px;
 }
+
+@media screen and (max-width: 767px) {
+    .click {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .button1,
+    .button2 {
+        @media screen and (max-width: 767px) {
+            .click {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .button1,
+            .button2 {
+                width: 30%;
+            }
+
+            .actualPage {
+                padding-left: 20px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .click {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .button1,
+            .button2 {
+                width: 85%;
+                margin: 5px;
+            }
+
+            .actualPage {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .actualPage {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .click {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button1,
+    .button2 {
+        width: 85%;
+        margin: 3px;
+    }
+
+    .actualPage {
+        padding-left: 0;
+        text-align: center;
+    }
+}

@@ -30,14 +30,18 @@ export default function Home() {
 
     useEffect(() => {
         dispatch(getVideogame());
+
     }, [dispatch])
 
 
     return (
         <div className="back">
+
             <br />
 
             <div className="refresh1">
+
+
                 <div className="buttonRefresh">
                     <button onClick={() => window.location.reload()}>Refresh</button>
                 </div>

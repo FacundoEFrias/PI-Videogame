@@ -47,3 +47,37 @@ h2 {
     color: rgb(255, 0, 144);
 
 }
+
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .imgCard {
+        height: 40%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .h3 {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-resolution: 144dpi) {
+    .card {
+        box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background-color: rgba(191, 123, 255, 0.9);
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .h3 {
+        font-size: 22px;
+    }
+}

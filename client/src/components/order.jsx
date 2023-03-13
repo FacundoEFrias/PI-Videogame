@@ -7,13 +7,13 @@ import "./order.css"
 
 
 
-export default function Order() {
+export default function Order({ setPagina }) {
     const dispatch = useDispatch()
 
 
     function onSort(e) {
         dispatch(Acomodar(e.target.value))
-
+        setPagina(1)
     }
 
 

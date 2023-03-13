@@ -31,3 +31,36 @@
     justify-content: center;
 
 }
+
+@media only screen and (max-width: 480px) {
+    .search-container {
+        float: none;
+    }
+
+    .search-container-Input {
+        float: none;
+        margin-right: 0;
+    }
+
+    .Search-Bar {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .search-container {
+        float: right;
+    }
+
+    .search-container-Input {
+        margin-right: 16px;
+        background: #8A2BE2;
+        color: white;
+        cursor: pointer;
+    }
+
+    .search-container-Input:hover {
+        background: #ccc;
+    }
+}

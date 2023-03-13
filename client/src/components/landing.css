@@ -72,4 +72,68 @@ button:active {
 
 }
 
+/* Estilos para dispositivos con un ancho máximo de 480px (por ejemplo, smartphones en posición vertical) */
+@media only screen and (max-width: 480px) {
+    .back3 {
+        padding: 60px;
+    }
+
+    .text {
+        font-size: 32px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 0.75em 1.5em;
+    }
+}
+
+/* Estilos para dispositivos con un ancho mínimo de 481px y máximo de 768px (por ejemplo, smartphones en posición horizontal y tablets en posición vertical) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .back3 {
+        padding: 100px;
+    }
+
+    .text {
+        font-size: 48px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 1em 2.5em;
+    }
+}
+
+/* Estilos para dispositivos con un ancho mínimo de 769px y máximo de 1024px (por ejemplo, tablets en posición horizontal y monitores pequeños) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .back3 {
+        padding: 130px;
+    }
+
+    .text {
+        font-size: 64px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 1.25em 3em;
+    }
+}
+
+/* Estilos para dispositivos con un ancho mínimo de 1025px (por ejemplo, monitores grandes y televisores) */
+@media only screen and (min-width: 1025px) {
+    .back3 {
+        padding: 185px;
+    }
+
+    .text {
+        font-size: 77px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 1.5em 3.5em;
+    }
+}
+
 ;

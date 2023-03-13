@@ -26,7 +26,7 @@ export default function FiltradoGenre({ setPagina }) {
 
     return <div className='select'>
         <select name="select" onChange={(e) => onSelectChange(e)}>
-            <option value={Todos}>Todos</option>
+            <option value={Todos}>All</option>
             {allGenre.map((e) => (
                 <option value={e.name}>{e.name}</option>
             ))}

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { videogameDetail } from "../action/actions";
+import { ClearState, videogameDetail } from "../action/actions";
 import { useParams } from "react-router-dom";
 import "./videoDetails.css"
 import descriptionImage from "../images/description.jpg"
@@ -15,8 +15,10 @@ export default function VideoDetail() {
 
     useEffect(() => {
         dispatch(videogameDetail(id));
-
-    }, [dispatch])
+        return () => {
+            dispatch(ClearState());
+        }
+    }, [dispatch, id])
 
 
 

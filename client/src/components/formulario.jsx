@@ -73,7 +73,7 @@ export default function Formulario() {
         if (!input.rating) { return alert("please put the rating of the videogame") }
         dispatch(postVideogame(input))
         dispatch(getVideogame())
-        alert(`Game Created `)
+        alert(`Your game was created successfully `)
 
         setInput({
             name: "",
