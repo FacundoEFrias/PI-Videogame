@@ -9,7 +9,8 @@ const initialState ={
     videogames: [],
     videoDetail: [],
     genre: [],
-    platform:[]
+    platform:[],
+    filters: {}
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -21,10 +22,10 @@ const rootReducer = (state = initialState, action) => {
                 videogames: action.payload
 
             }
-            //se utiliza typeof para saber si se encontro o no
+            
             case  SEARCH_ALL:
                 if(typeof action.payload === "string"){
-                    alert("Not found the game")
+                    alert("No games found")
                     return {...state}
                 }
                  return {
@@ -84,16 +85,18 @@ const rootReducer = (state = initialState, action) => {
                    
                 case ALL_GENRE:
                     let AllGenre = [...state.videogame]
-                    let FilterGenre = action.payload === Todos ? AllGenre : AllGenre.filter(x => x.genres.includes(action.payload))
-                    if(FilterGenre.length === 0){
-                        alert(`No games found with that genre ${action.payload} `)
-                        return state
-                    }
-                    return {
-                        ...state,
-                        videogames: FilterGenre
-                        
-                    }
+                    const filterGenre = action.payload
+                    const filteredByGenres = filterGenre === Todos ? AllGenre : AllGenre.filter(game => game.genres.includes(filterGenre));
+                    const filteredByOrigin = filterGenre === API ? AllGenre.filter(game => game.origin === API) : AllGenre.filter(game => !game.origin);
+                    const filteredByOriginAll = filterGenre === ALL ? AllGenre : filteredByOrigin;
+                    const filterAz = filterGenre === ASC ? AllGenre.sort((a, b) => a.name.localeCompare(b.name)) : AllGenre;
+                    const filterZa = filterGenre === DESC ? AllGenre.sort((a,b)=> b.name.localeCompare(a.name)) : AllGenre
+                    const filterRating = filterGenre === RATING ? AllGenre.sort((a,b)=> b.rating - a.rating) : AllGenre;
+                    const filterRatingDes = filterGenre === RATINGDESC ? AllGenre.sort((a,b)=> a.rating - b.rating) : AllGenre;
+                     return {
+                            ...state,
+                        videogames: filteredByGenres.concat(filteredByOrigin, filteredByOriginAll, filterAz,filterZa,filterRating,filterRatingDes)
+                         };
                     case GENRE:
                         return {
                             ...state,
@@ -102,7 +105,7 @@ const rootReducer = (state = initialState, action) => {
                 case ID:
                     return {
                         ...state,
-                        videoDetail: action.payload
+                        videoDetail: action.payload,
                     }
                 case CREADOS:
                     let Creado = [...state.videogame]
@@ -121,7 +124,11 @@ const rootReducer = (state = initialState, action) => {
                         ...state,
                         platform: action.payload
                     }
-                    
+                case 'CLEAR_STATE':
+                    return{
+                         ...state,
+                          videoDetail: []
+                         }
                   
             default:
                 return state
