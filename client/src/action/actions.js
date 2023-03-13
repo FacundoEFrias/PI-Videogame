@@ -37,7 +37,7 @@ export function getSearchBar(search){
 
 export function Acomodar(payload){
     return {
-        type: SORT,
+        type: ALL_GENRE,
         payload
     }
 
@@ -77,7 +77,7 @@ export function videogameDetail(id){
 
 export function filtrarCreados(payload){
     return {
-        type: CREADOS,
+        type: ALL_GENRE,
         payload
     }
 }
@@ -101,3 +101,8 @@ export function FilterAllPlatforms(payload){
             console.log(error)
         })
     }}
+
+export function ClearState () {
+    return {
+  type: 'CLEAR_STATE'
+}}
