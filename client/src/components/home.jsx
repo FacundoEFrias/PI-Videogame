@@ -7,7 +7,7 @@ import Card from "./card";
 import SearchBar from "./searchBar";
 import Order from "./order";
 import Filtrado from "./filtradoCreate";
-import FiltradoGenre from "./FiltradoGenre.jsx";
+
 import "./home.css"
 import { useState } from "react";
 import { Paginacion } from "./paginacion";
