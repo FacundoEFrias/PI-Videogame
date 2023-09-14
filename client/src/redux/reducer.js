@@ -97,10 +97,10 @@ const rootReducer = (state = initialState, action) => {
                             ...state,
                         videogames: filteredByGenres.concat(filteredByOrigin, filteredByOriginAll, filterAz,filterZa,filterRating,filterRatingDes)
                          };
-                    case GENRE:
-                        return {
-                            ...state,
-                            genre: action.payload
+                case GENRE:
+                    return {
+                         ...state,
+                        genre: action.payload
                         }
                 case ID:
                     return {
