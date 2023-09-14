@@ -59,18 +59,21 @@ export default function Home() {
                 
 
             </div>
-            {allvideogame.length > 0 ?
+    
                 <div className="wrapper">
-                    {
-                        currentgames.map(e => {
-                            return <Card
-                                id={e.id}
-                                name={e.name}
-                                image={e.image}
-                                genre={e.genres} />
-                        })
-                    }
-                </div> : <img className="imgError" src="https://media.tenor.com/HDBSE8gEHnIAAAAd/nintendo-gamecube-gamecube.gif" alt="Error" />}
+                {
+                Array.isArray(currentgames) && currentgames.length > 0 ? (
+                currentgames.map(e => (
+                <Card
+                    key={e.id}
+                    id={e.id}
+                    name={e.name}
+                    image={e.image}
+                    genre={e.genres}
+                />
+                ))
+                )  : (<img className="imgError" src="https://media.tenor.com/HDBSE8gEHnIAAAAd/nintendo-gamecube-gamecube.gif" alt="Error" />
+                )}
             <br />
             <div className="click">
                 {
