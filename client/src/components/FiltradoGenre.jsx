@@ -14,9 +14,7 @@ export default function FiltradoGenre({ setPagina }) {
     const allGenre = useSelector((state) => state.genre)
 
 
-    useEffect(() => {
-        dispatch(FilterGenre());
-    }, [dispatch])
+    
 
     function onSelectChange(e) {
         dispatch(FilterAllGenre(e.target.value))
