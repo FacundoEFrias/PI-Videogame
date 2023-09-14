@@ -7,7 +7,7 @@ import Card from "./card";
 import SearchBar from "./searchBar";
 import Order from "./order";
 import Filtrado from "./filtradoCreate";
-import FiltradoGenre from "./FiltradoGenre";
+import FiltradoGenre from "./FiltradoGenre.jsx";
 import "./home.css"
 import { useState } from "react";
 import { Paginacion } from "./paginacion";
@@ -56,7 +56,7 @@ export default function Home() {
             <div className="padre">
                 <Order setPagina={setPagina} />
                 <Filtrado setPagina={setPagina} />
-                <FiltradoGenre setPagina={setPagina} />
+                
 
             </div>
             {allvideogame.length > 0 ?
