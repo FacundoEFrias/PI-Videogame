@@ -60,10 +60,10 @@ export default function Home() {
 
             </div>
     
-                <div className="wrapper">
-                {
-                Array.isArray(currentgames) && currentgames.length > 0 ? (
-                currentgames.map(e => (
+            <div className="wrapper">
+    {
+        Array.isArray(currentgames) && currentgames.length > 0 ? (
+            currentgames.map(e => (
                 <Card
                     key={e.id}
                     id={e.id}
@@ -71,9 +71,14 @@ export default function Home() {
                     image={e.image}
                     genre={e.genres}
                 />
-                ))
-                )  : (<img className="imgError" src="https://media.tenor.com/HDBSE8gEHnIAAAAd/nintendo-gamecube-gamecube.gif" alt="Error" />
-                )}
+            ))
+        ) : (
+            // Manejo del caso en el que currentgames no es un arreglo o está vacío
+            <p>No hay juegos para mostrar.</p>
+        )
+    }
+</div>
+
             <br />
             <div className="click">
                 {
