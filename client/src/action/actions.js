@@ -11,7 +11,7 @@ export const ALL_PlATFORMS = "ALL_PlATFORMS"
 
 export function getVideogame() {
     return function(dispatch){
-        axios.get("http://localhost:3001/api/videogame/")
+        axios.get("api-videogame-production-c395.up.railway.app/api/videogame/")
         .then((videogame) => {
             dispatch({ type: GET_ALL, 
                         payload: videogame.data });
@@ -24,7 +24,7 @@ export function getVideogame() {
 
 export function getSearchBar(search){
     return function(dispatch){
-        axios.get(`http://localhost:3001/api/videogame?name=${search}`)
+        axios.get(`api-videogame-production-c395.up.railway.app/api/videogame?name=${search}`)
         .then((videogame) => {
             dispatch({ type: SEARCH_ALL, 
                         payload: videogame.data });
@@ -45,7 +45,7 @@ export function Acomodar(payload){
 
 export function FilterGenre(){
     return function(dispatch){
-        axios.get("http://localhost:3001/api/genre")
+        axios.get("api-videogame-production-c395.up.railway.app/api/genre")
         .then((videogame) => {
             dispatch({ type: GENRE, 
                         payload: videogame.data });
@@ -65,7 +65,7 @@ export function FilterAllGenre(payload){
 
 export function videogameDetail(id){
     return function(dispatch){
-        axios.get(`http://localhost:3001/api/videogame/${id}`)
+        axios.get(`api-videogame-production-c395.up.railway.app/api/videogame/${id}`)
         .then((videogame) => {
             dispatch({ type: ID, 
                         payload: videogame.data });
@@ -83,7 +83,7 @@ export function filtrarCreados(payload){
 }
 export function postVideogame(payload){
     return async function(dispatch){
-       const respon = axios.post(`http://localhost:3001/api/post/`, payload)
+       const respon = axios.post(`api-videogame-production-c395.up.railway.app/api/post/`, payload)
         return respon
         .catch((error) => {
             console.log(error)
@@ -92,7 +92,7 @@ export function postVideogame(payload){
 
 export function FilterAllPlatforms(payload){
     return function(dispatch){
-        axios.get(`http://localhost:3001/api/platforms/`)
+        axios.get(`api-videogame-production-c395.up.railway.app/api/platforms/`)
         .then((videogame) => {
             dispatch({ type: ALL_PlATFORMS, 
                         payload: videogame.data });
